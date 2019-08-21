@@ -81,6 +81,13 @@ class Plot(object):
             fc='g',
             alpha=0.3
         )
+
+        loc = mpatches.Rectangle(
+            (vehicle.location[0], vehicle.location[1]),
+            1, 1, fc='k'
+        )
+
         ax.add_patch(lidar)
+        ax.add_patch(loc)
 
         return ax
